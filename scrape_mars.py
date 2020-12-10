@@ -4,7 +4,9 @@ import os
 from splinter import Browser
 from webdriver_manager.chrome import ChromeDriverManager
 import requests
-
+import pandas as pd
+import warnings
+warnings.filterwarnings('ignore')
 
 ### NASA Mars News
 
@@ -121,5 +123,14 @@ for i in range (4):
     print(img_title)
     print(img_url)
 
-
 hemisphere_image_urls
+
+# Import data to Mongo
+mars_data = {
+    "Mars_News_Title": header,
+    "Mars_News_Paragraph": subheader,
+    "Mars_Featured_Image": img_url,
+    "Mars_Facts": df,
+    "Mars_Hemispheres": hemisphere_image_urls}
+    
+browser.quit()

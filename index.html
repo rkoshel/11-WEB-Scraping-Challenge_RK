@@ -10,70 +10,97 @@
 
 <body>
     <div class="jumbotron text-center"></div>
-    <h1>Mission to Mars</h1>
+    <h1 style="color:#01ffdd">Mission to Mars</h1>
 
-
-  <div class="container">
-
-    <h3>Latest Mars News</h3>
+    <div class="row">
+        <div class="col-md-12">
+          <h2 style="color:#09c4e6">Latest Mars News</h2>
+        </div>
+      </div>
+    <div class="row">
+        <div class="col-md-12">
+          <h4>{{mars_data.Mars_News_Title}}</h4>
+          <p>{{mars_data.Mars_News_Paragraph}}</p>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-8 border">
+          <h2 style="color:#09c4e6">Featured Mars Image</h2> 
+          </br>
+          <img src="{{mars_data.Mars_Featured_Image}}" alt="Features Mars Image">
+        </div>
+        <div class="col-md-4">
+          <div class="border">
+            </br>
+            <h2 style="color:#09c4e6">Mars Facts</h2>
+            <table border="1" class="dataframe">
+                <thead>
+                  <tr style="text-align: right;">
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="color:#fcfcfc">Equatorial Diameter:</td>
+                    <td style="color:#fcfcfc">6,792 km</td>
+                  </tr>
+                  <tr>
+                    <td style="color:#fcfcfc">Polar Diameter:</td>
+                    <td style="color:#fcfcfc">6,752 km</td>
+                  </tr>
+                  <tr>
+                    <td style="color:#fcfcfc">Mass:</td>
+                    <td style="color:#fcfcfc">6.39 × 10^23 kg (0.11 Earths)</td>
+                  </tr>
+                  <tr>
+                    <td style="color:#fcfcfc">Moons:</td>
+                    <td style="color:#fcfcfc">2 (Phobos &amp; Deimos)</td>
+                  </tr>
+                  <tr>
+                    <td style="color:#fcfcfc">Orbit Distance:</td>
+                    <td style="color:#fcfcfc">227,943,824 km (1.38 AU)</td>
+                  </tr>
+                  <tr>
+                    <td style="color:#fcfcfc">Orbit Period:</td>
+                    <td style="color:#fcfcfc">687 days (1.9 years)</td>
+                  </tr>
+                  <tr>
+                    <td style="color:#fcfcfc">Surface Temperature:</td>
+                    <td style="color:#fcfcfc">-87 to -5 °C</td>
+                  </tr>
+                  <tr>
+                    <td style="color:#fcfcfc">First Record:</td>
+                    <td style="color:#fcfcfc">2nd millennium BC</td>
+                  </tr>
+                  <tr>
+                    <td style="color:#fcfcfc">Recorded By:</td>
+                    <td style="color:#fcfcfc">Egyptian astronomers</td>
+                  </tr>
+                </tbody>
+              </table>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8 offset-4">
+          <h2 style="color:#09c4e6">Mars hemispheres</h2>  
+        </div>
+      </div>
+      <div class="row">       
+                <div class="col-6 border">
+                </br>
+                      <div>
+                        <img width="512 px" height="512 px" src="{{ hemisphere_image_urls | safe }}">
+                      </div>
+              
+                </div>
+      </div> 
   
-    </div>
+    <hr>
 
-    
-    
-    <table border="1" class="dataframe">
-        <thead>
-          <tr style="text-align: right;">
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th>0</th>
-            <td>Equatorial Diameter:</td>
-            <td>6,792 km</td>
-          </tr>
-          <tr>
-            <th>1</th>
-            <td>Polar Diameter:</td>
-            <td>6,752 km</td>
-          </tr>
-          <tr>
-            <th>2</th>
-            <td>Mass:</td>
-            <td>6.39 × 10^23 kg (0.11 Earths)</td>
-          </tr>
-          <tr>
-            <th>3</th>
-            <td>Moons:</td>
-            <td>2 (Phobos &amp; Deimos)</td>
-          </tr>
-          <tr>
-            <th>4</th>
-            <td>Orbit Distance:</td>
-            <td>227,943,824 km (1.38 AU)</td>
-          </tr>
-          <tr>
-            <th>5</th>
-            <td>Orbit Period:</td>
-            <td>687 days (1.9 years)</td>
-          </tr>
-          <tr>
-            <th>6</th>
-            <td>Surface Temperature:</td>
-            <td>-87 to -5 °C</td>
-          </tr>
-          <tr>
-            <th>7</th>
-            <td>First Record:</td>
-            <td>2nd millennium BC</td>
-          </tr>
-          <tr>
-            <th>8</th>
-            <td>Recorded By:</td>
-            <td>Egyptian astronomers</td>
-          </tr>
-        </tbody>
-      </table>
+    <body class="text-white" style="background-image: url(https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA23378_hires.jpg?ve=1&tl=1);
+    background-size: cover; background-position: center">
+
   </div>
 </body>
 
